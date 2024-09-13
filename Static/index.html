@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHlang Web Drawing App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ehlang DrawShapes Baby</h1>
+
+        <!-- Shape Selector -->
+        <div class="control-group">
+            <label for="shapeSelector">Shape</label>
+            <select id="shapeSelector">
+                <option value="circle">Circle</option>
+                <option value="rect">Rectangle</option>
+                <option value="polyline">Polyline</option>
+            </select>
+
+            <!-- Color Picker -->
+            <label for="colorPicker">Color</label>
+            <input type="color" id="colorPicker" value="#ffffff">
+
+            <!-- Background Color Picker -->
+            <label for="bgColorPicker">Background</label>
+            <input type="color" id="bgColorPicker" value="#000000">
+        </div>
+
+        <!-- Eraser and Clear Canvas -->
+        <div class="tool-group">
+           
+            <button id="clearCanvasButton">Clear</button>
+        </div>
+
+        <!-- Canvas for Drawing -->
+        <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+        <!-- Submit Button and Loading Bar -->
+        <div class="submit-group">
+            <button id="submitDrawing">Submit</button>
+            <div id="loadingBar"></div>
+        </div>
+
+        <!-- Error Panel -->
+        <div id="errorPanel"></div>
+        <div id="overlay"></div>
+        <!-- Output Image -->
+        <div id="outputPopup">
+            <button id="closePopup">&times;</button>
+            <img id="outputImage" src="" alt="Your generated drawing will appear here" />
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
